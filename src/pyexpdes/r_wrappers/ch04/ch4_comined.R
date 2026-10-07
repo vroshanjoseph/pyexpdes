@@ -69,7 +69,7 @@ comined <- function(n, p, tau, constraint, n.aug, auto.scale = F,
   min.dist <- min(dist(samp))
   min.ddist <- Inf # dimensional minimum
   for (i in 1:p){
-    ddist <- min(dist(samp[,p]))
+    ddist <- min(dist(samp[,i]))
     if (ddist < min.ddist) min.ddist <- ddist
   }
   samp.gval <- matrix(t(apply(samp,1,constraint)), nrow=nrow(samp))

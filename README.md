@@ -71,6 +71,20 @@ jupyter lab notebooks/ch01.ipynb
 - Ch10: SPlit, BalancedSampling, supercompress
 - Ch11: first, randomForest, twingp
 
+`support`, `mixexp`, `minimaxdesign` and `mined` have been archived on CRAN,
+so `install.packages()` no longer finds them. They install from the archive:
+
+```r
+install.packages(
+  "https://cran.r-project.org/src/contrib/Archive/support/support_0.1.7.tar.gz",
+  repos = NULL, type = "source"
+)
+```
+
+The other three are under `Archive/mixexp/`, `Archive/minimaxdesign/` and
+`Archive/mined/` at the same address. Building them needs a C++ / Fortran
+toolchain.
+
 ## Related
 
 - R implementation: [vroshanjoseph/rexpdes](https://github.com/vroshanjoseph/rexpdes)
